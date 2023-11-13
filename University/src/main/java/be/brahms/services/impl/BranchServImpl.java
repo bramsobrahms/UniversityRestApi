@@ -15,6 +15,7 @@ public class BranchServImpl implements BranchServ {
     private final BranchRepo branchRepo;
     private final CourseRepo courseRepo;
 
+
     public BranchServImpl(BranchRepo branchRepo, CourseRepo courseRepo){
         this.branchRepo = branchRepo;
         this.courseRepo = courseRepo;
@@ -22,7 +23,11 @@ public class BranchServImpl implements BranchServ {
 
     @Override
     public BranchEnt create(BranchEnt branch) {
-        return null;
+        if(branchRepo.existsByName(branch.getName())){
+            throw new RuntimeException();
+        }
+        branch.setId(branch.getName()+ "007");
+        return branchRepo.save(branch);
     }
 
     @Override

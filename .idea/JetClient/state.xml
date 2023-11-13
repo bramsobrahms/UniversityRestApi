@@ -8,6 +8,7 @@
             <requestState>
               <option name="body">
                 <bodyState>
+                  <option name="raw" value="{&#10;  &quot;id&quot;: 1,&#10;  &quot;name&quot;: &quot;Histoire&quot;,&#10;  &quot;summary&quot;: &quot;Moise&quot;&#10;}" />
                   <option name="type" value="JSON" />
                 </bodyState>
               </option>
@@ -27,7 +28,7 @@
             <requestState>
               <option name="body">
                 <bodyState>
-                  <option name="raw" value="{&#10;  &quot;id&quot;: 1,&#10;  &quot;name&quot;: &quot;Histoire&quot;,&#10;  &quot;summary&quot;: &quot;cours sur dieuEgyptien&quot;&#10;}" />
+                  <option name="raw" value="{&#10;  &quot;id&quot;: 2,&#10;  &quot;name&quot;: &quot;HistoireGeo&quot;,&#10;  &quot;summary&quot;: &quot;GeoHistoire&quot;&#10;}" />
                   <option name="type" value="JSON" />
                 </bodyState>
               </option>
@@ -40,9 +41,9 @@
                 </list>
               </option>
               <option name="id" value="ee8c69bc-a75f-437d-8281-96a870e37287" />
-              <option name="method" value="POST" />
+              <option name="method" value="GET" />
               <option name="name" value="Draft 1" />
-              <option name="url" value="http://localhost:8080/course" />
+              <option name="url" value="http://localhost:8080/course/Hi39" />
             </requestState>
           </list>
         </option>

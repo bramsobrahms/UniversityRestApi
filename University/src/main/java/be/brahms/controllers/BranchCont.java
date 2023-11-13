@@ -26,8 +26,8 @@ public class BranchCont {
 
     @GetMapping(path = "")
     public ResponseEntity<List<BranchEnt>> listBranch(){
-        List<BranchEnt> listeBranch = branchService.listeBranch();
-        return ResponseEntity.ok(listeBranch);
+        List<BranchEnt> listsBranch = branchService.listeBranch();
+        return ResponseEntity.ok(listsBranch);
     }
 
     @PostMapping
