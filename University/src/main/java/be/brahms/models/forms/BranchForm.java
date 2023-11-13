@@ -10,7 +10,7 @@ public class BranchForm {
 
     private String name;
     private Set<String> courseIds;
-    private BranchEnt toEntity(){
+    public BranchEnt toEntity(){
         return new BranchEnt(this.name);
     }
 }
