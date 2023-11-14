@@ -21,19 +21,7 @@ public class TeacherServImpl implements TeacherServ {
 
     @Override
     public TeacherEnt create(TeacherEnt teacher) {
-//        if(teacherRepo.existsById(teacher.getId())){
-//            throw new AlreadyExistTeatcherException();
-//        }
-        String id;
-
-        do{
-            Random rng = new Random();
-            //String newId = teacher.getId().substring(0,2) + rng.nextInt(5,10);
-
-            id = "bonjourisdf";
-        }while (teacherRepo.existsById(id));
-
-        teacher.setId(id);
+        teacher.setId(teacher.getId()+"007");
         return teacherRepo.save(teacher);
     }
 
