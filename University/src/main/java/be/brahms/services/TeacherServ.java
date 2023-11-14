@@ -4,7 +4,7 @@ import be.brahms.models.entities.persons.TeacherEnt;
 
 import java.util.List;
 
-public interface TeachterServ {
+public interface TeacherServ {
 
     TeacherEnt create(TeacherEnt teacher);
 

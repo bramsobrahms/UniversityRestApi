@@ -7,7 +7,6 @@ import lombok.Data;
 @Data
 public class TeacherForm {
 
-    @NotBlank
     private String title;
 
     public TeacherEnt toEntity(){
