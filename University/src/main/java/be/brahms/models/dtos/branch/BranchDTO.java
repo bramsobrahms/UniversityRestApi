@@ -1,4 +1,4 @@
-package be.brahms.models.dtos.course.branch;
+package be.brahms.models.dtos.branch;
 
 import be.brahms.models.entities.BranchEnt;
 

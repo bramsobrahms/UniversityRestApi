@@ -45,6 +45,11 @@
               <option name="name" value="Draft 1" />
               <option name="url" value="http://localhost:8080/course/Hi39" />
             </requestState>
+            <requestState>
+              <option name="id" value="541733b1-ac57-493d-8384-103794416ae5" />
+              <option name="method" value="GET" />
+              <option name="name" value="Draft 2" />
+            </requestState>
           </list>
         </option>
       </draftsState>

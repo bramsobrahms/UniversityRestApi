@@ -1,6 +1,6 @@
 package be.brahms.controllers;
 
-import be.brahms.models.dtos.course.course.CourseDTO;
+import be.brahms.models.dtos.course.CourseDTO;
 import be.brahms.models.entities.CourseEnt;
 import be.brahms.models.forms.CourseForm;
 import be.brahms.services.CourseServ;
