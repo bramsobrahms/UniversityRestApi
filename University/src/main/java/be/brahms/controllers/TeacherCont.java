@@ -2,7 +2,6 @@ package be.brahms.controllers;
 
 
 import be.brahms.models.entities.persons.TeacherEnt;
-import be.brahms.models.forms.AddressForm;
 import be.brahms.models.forms.TeacherForm;
 import be.brahms.services.TeacherServ;
 import jakarta.validation.Valid;
@@ -20,9 +19,8 @@ public class TeacherCont {
     }
 
     @PostMapping
-    public ResponseEntity<TeacherEnt> createTeacher(@RequestBody @Valid TeacherForm form, AddressForm formAd){
+    public ResponseEntity<TeacherEnt> createTeacher(@RequestBody @Valid TeacherForm form){
         TeacherEnt teacher = teacherServ.create(form.toEntity());
-        teacher.setAddress(formAd.toEntity());
         return ResponseEntity.ok(teacher);
     }
 

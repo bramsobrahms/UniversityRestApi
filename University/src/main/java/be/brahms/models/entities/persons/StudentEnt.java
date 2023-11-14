@@ -4,10 +4,7 @@ import be.brahms.models.entities.BranchEnt;
 import be.brahms.models.entities.PersonEnt;
 import be.brahms.models.entities.StudentCourseEnt;
 import be.brahms.models.entities.embedded.Address;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,18 +14,18 @@ import java.util.Set;
 @Entity(name = "student")
 public class StudentEnt extends PersonEnt {
 
-    @OneToMany( mappedBy = "student", fetch = FetchType.LAZY )
-    private Set<StudentCourseEnt> studentCourseSet = new HashSet<>();
+    @OneToMany( mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<StudentCourseEnt> studentCourseSet;
 
     @Getter @Setter
     @ManyToOne(targetEntity = BranchEnt.class, fetch = FetchType.LAZY)
     private BranchEnt branch;
 
-    public StudentEnt(String firstname, String lastname, Address address, Set<StudentCourseEnt> studentCourseSet, BranchEnt branch){
-        this.setAddress(address);
-        this.studentCourseSet = studentCourseSet;
-        this.branch = branch;
+    public StudentEnt(){
+        this.studentCourseSet = new HashSet<>();
     }
+
+//--
 
     public Set<StudentCourseEnt> getStudentCourseSet(){
         return Set.copyOf(this.studentCourseSet);

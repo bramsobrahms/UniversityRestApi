@@ -2,7 +2,6 @@ package be.brahms.services.impl;
 
 import be.brahms.exceptions.teacher.NotFoundTeacherException;
 import be.brahms.models.entities.persons.TeacherEnt;
-import be.brahms.repositories.AddressRep;
 import be.brahms.repositories.TeacherRepo;
 import be.brahms.services.TeacherServ;
 import org.springframework.stereotype.Service;
