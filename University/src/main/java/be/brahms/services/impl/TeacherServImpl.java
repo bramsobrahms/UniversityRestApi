@@ -1,22 +1,23 @@
 package be.brahms.services.impl;
 
-import be.brahms.exceptions.teacher.AlreadyExistTeatcherException;
 import be.brahms.exceptions.teacher.NotFoundTeacherException;
 import be.brahms.models.entities.persons.TeacherEnt;
+import be.brahms.repositories.AddressRep;
 import be.brahms.repositories.TeacherRepo;
 import be.brahms.services.TeacherServ;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Random;
 
 @Service
 public class TeacherServImpl implements TeacherServ {
 
     private final TeacherRepo teacherRepo;
+    private final AddressRep addressRep;
 
-    public TeacherServImpl(TeacherRepo teacherRepo) {
+    public TeacherServImpl(TeacherRepo teacherRepo, AddressRep addressRep) {
         this.teacherRepo = teacherRepo;
+        this.addressRep = addressRep;
     }
 
     @Override
