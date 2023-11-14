@@ -25,7 +25,13 @@ public class StudentEnt extends PersonEnt {
         this.studentCourseSet = new HashSet<>();
     }
 
-//--
+    public StudentEnt(String id, String firstname, String lastname, Address address){
+        this();
+        this.setId(id);
+        this.setFirstname(firstname);
+        this.setLastname(lastname);
+        this.setAddress(address);
+    }
 
     public Set<StudentCourseEnt> getStudentCourseSet(){
         return Set.copyOf(this.studentCourseSet);
