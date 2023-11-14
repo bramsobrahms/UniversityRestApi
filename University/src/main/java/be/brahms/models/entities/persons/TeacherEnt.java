@@ -1,6 +1,7 @@
 package be.brahms.models.entities.persons;
 
 import be.brahms.models.entities.PersonEnt;
+import be.brahms.models.entities.embedded.Address;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.*;
@@ -21,6 +22,11 @@ public class TeacherEnt extends PersonEnt {
                 super.toString() +
                 "title='" + title + '\'' +
                 '}';
+    }
+
+    public TeacherEnt(String title, String firstname, String lastname, Address address){
+        super(firstname, lastname, address);
+        this.title = title;
     }
 
     @Override
