@@ -1,6 +1,7 @@
 package be.brahms.controllers;
 
 
+import be.brahms.models.entities.embedded.Address;
 import be.brahms.models.entities.persons.TeacherEnt;
 import be.brahms.models.forms.TeacherForm;
 import be.brahms.services.TeacherServ;

@@ -16,6 +16,7 @@ public class TeacherEnt extends PersonEnt {
     @Column(length = 50, nullable = false)
     private String title;
 
+
     @Override
     public String toString() {
         return "TeacherEnt{" +
