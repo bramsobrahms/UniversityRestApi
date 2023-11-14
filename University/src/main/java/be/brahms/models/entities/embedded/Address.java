@@ -2,13 +2,11 @@ package be.brahms.models.entities.embedded;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter @Setter
 @ToString @EqualsAndHashCode
+@NoArgsConstructor @AllArgsConstructor
 @Embeddable
 public class Address {
 
@@ -26,4 +24,5 @@ public class Address {
 
     @Column(length = 50, nullable = false)
     private String country;
+
 }
