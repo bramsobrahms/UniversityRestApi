@@ -13,11 +13,9 @@ import java.util.List;
 public class TeacherServImpl implements TeacherServ {
 
     private final TeacherRepo teacherRepo;
-    private final AddressRep addressRep;
 
-    public TeacherServImpl(TeacherRepo teacherRepo, AddressRep addressRep) {
+    public TeacherServImpl(TeacherRepo teacherRepo) {
         this.teacherRepo = teacherRepo;
-        this.addressRep = addressRep;
     }
 
     @Override
