@@ -25,4 +25,6 @@ public class Address {
     @Column(length = 50, nullable = false)
     private String country;
 
+    public Address(Address address) {
+    }
 }
