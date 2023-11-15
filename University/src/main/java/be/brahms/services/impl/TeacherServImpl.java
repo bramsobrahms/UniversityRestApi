@@ -7,6 +7,7 @@ import be.brahms.services.TeacherServ;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class TeacherServImpl implements TeacherServ {
@@ -19,7 +20,9 @@ public class TeacherServImpl implements TeacherServ {
 
     @Override
     public TeacherEnt create(TeacherEnt teacher) {
-        teacher.setId(teacher.getId()+"007");
+        String rand = String.valueOf((int) (Math.random()*100));
+
+        teacher.setId("prof"+rand);
         return teacherRepo.save(teacher);
     }
 
